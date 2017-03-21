@@ -1,2 +1,5 @@
-client
+.gitignore
 node_modules
+client/node_modules
+client/src/tsconfig.app.json
+client/src/tsconfig.spec.json

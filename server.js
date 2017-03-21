@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const bodyParser = require('body-parser');
@@ -38,6 +39,11 @@ require('./config/jwtStrategy')(passport);
 //all user related routes use this url
 app.use('/users', users);
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 //starts the server
 app.listen(port, () => {
     console.log('server started at 3000');

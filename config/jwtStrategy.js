@@ -10,7 +10,6 @@ module.exports = (passport) => {
     opts.secretOrKey = config.secret;
 
     passport.use(new JWTStrategy(opts, (jwt_payload, done) => {
-        console.log(jwt_payload);
         UserModel.getUserById(jwt_payload._doc._id, (err, user) => {
             if (err) {
                 return done(err, false);
