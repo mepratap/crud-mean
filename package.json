@@ -1,0 +1,23 @@
+{
+  "name": "binder",
+  "version": "1.0.0",
+  "description": "binder app",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongoose": "^4.9.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^7.3.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.8"
+  },
+  "author": "Mohan Kunwar",
+  "license": "ISC"
+}
